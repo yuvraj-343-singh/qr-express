@@ -7,10 +7,9 @@ app.use(cors())
 
 app.get('/', async (req, res) => {
     try {
-        console.log(req.query)
         // Data to be encoded in QR
         const data = {
-            id: 51,
+            id: req.query.id,
             name: req.query.name
         }
         // Generate QR base64 from string
